@@ -1,1 +1,68 @@
 
+# Build a simple chatbot that responds to user inputs based on predefined rules.
+# Use if-else statements or pattern matching techniques to identify user queries
+# and provide appropriate responses. This will give you a basic understanding 
+# of natural language processing and conversation flow.
+
+print("\tWelcome to T.bot\t")
+
+def chatBot():
+    while True:
+        user_input = input("You: ").lower()   # convert input to lowercase for easy matching
+
+        if user_input in ['hello', 'hi', 'hey']:
+            print("T.Bot: Hey! I am fine!")
+
+        elif 'affirmations' in user_input:
+            print("What type of affirmations do you want today?")
+            print("1. Study Affirmations\n2. Morning Affirmations\n3. Self Love Affirmations\n4. Toxic Study Affirmations")
+            
+            choice = input("Enter your choice (1, 2, 3, 4): ")
+
+            if choice == "1":
+                print('''1. I am fully focused and present while studying.
+2. My mind is clear, sharp, and alert.
+3. I easily absorb and understand new information.
+4. I am disciplined, consistent, and committed to my studies.
+5. I remain calm and positive while preparing for exams.
+6. Every small step I take today brings me closer to my goals.''')
+
+            elif choice == "2":
+                print('''1. Today is a fresh start, full of opportunities.
+2. I am grateful for this new day and all it will bring.
+3. I choose to focus on the good in my life.
+4. I radiate positivity and attract success.
+5. I have the strength to make today amazing.
+6. Great things are coming my way today.''')
+
+            elif choice == "3":
+                print('''1. I am enough, just as I am.
+2. I deeply and completely love and accept myself.
+3. I deserve love, respect, and kindness.
+4. I trust myself and my decisions.
+5. I am proud of who I am becoming.
+6. I release self-doubt and welcome self-confidence.''')
+
+            elif choice == "4":
+                print('''1. If I don’t study 10 hours today, I’m a failure.
+2. I must be perfect in everything I do.
+3. I can’t rest until I finish everything.
+4. Others are smarter than me, so I have to work twice as hard.
+5. Breaks are for lazy people.
+6. If I don’t score the highest, all my effort is worthless.
+7. If I don’t understand everything immediately, I’ll never succeed.''')
+
+            else:
+                print("We have limited affirmations right now... Please choose from the given options.")
+
+        elif user_input in ['thankyou', 'thank you', 'thanks']:
+            print("T.Bot: You're Welcome!")
+
+        elif user_input in ['bye', 'exit', 'quit']:
+            print("T.Bot: Goodbye!Have a nice day.")
+            break
+
+        else:
+            print("T.Bot: Sorry, I didn’t understand that. Try saying 'hello' or ask for 'affirmations'.")
+
+chatBot()
